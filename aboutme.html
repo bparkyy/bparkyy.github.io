@@ -1,0 +1,228 @@
+<!DOCTYPE>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title> About Me </title>
+        <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=EB Garamond:b' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <style>
+        .home {
+            padding:20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            background-color:goldenrod;
+            color: white;
+        }
+
+        .home:hover {
+                    opacity: 0.7;
+                    transition: 300ms;
+                }
+        
+        </style>
+        
+        <div align = center>
+                <a href="home.html" class="fa fa-home"></a>
+            </div>
+
+        <style>
+        .main {
+            overflow: auto;
+            font-family: 'EB Garamond';
+            font-size: 30px;
+            text-align: center;
+            color: black;
+        }
+
+        .small {
+            overflow: auto;
+            font-family: 'EB Garamond';
+            font-size: 18px;
+            text-align: center;
+            color: black;
+        }
+
+        </style>
+
+        <div class='main'>
+            <p>Background</p>
+        </div> 
+        
+        <div class='small'>
+            <p>I was born and raised in the state of Washington.</p>
+            <p>I have two parents, one sibling.</p>
+        </div>
+
+        <div class='main'>
+            <p>Things That I Like To Do</p>
+        </div> 
+
+        <div class='small'>
+                <p>P H O T O G R A P H Y (just a tad)</p>
+        </div>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .mySlides {
+                display: none;
+                margin-left: 33%;
+            }
+
+            .cursor {
+                cursor: pointer;
+            }
+
+
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 40%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: black;
+                font-weight: bold;
+                font-size: 50px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .prev:hover, .next:hover {
+                background-color:white;
+            }
+
+            .numbertext {
+                color: black;
+                font-size: 30px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+                }
+
+            .column {
+                float: left;
+                width: 20%;
+            }
+
+            .demo {
+                opacity: 0.6;
+            }
+
+            .active {
+                opacity:1;
+            }
+
+            .demo:hover {
+                opacity: 1;
+            }
+        </style>
+
+        <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 5</div>
+          <img src="IMG_0279 copy.jpg" style="width:50%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 5</div>
+          <img src="_MG_3560.jpg" style="width:50%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 5</div>
+          <img src="IMG_5961 copy.jpg" style="width:50%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 5</div>
+          <img src="IMG_0781.jpg" style="width:50%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 5</div>
+          <img src="IMG_7896.jpg" style="width:50%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="IMG_0279 copy.jpg" style="width:100%" onclick="currentSlide(1)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="_MG_3560.jpg" style="width:100%" onclick="currentSlide(2)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="IMG_5961 copy.jpg" style="width:100%" onclick="currentSlide(3)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="IMG_0781.jpg" style="width:100%" onclick="currentSlide(4)">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="IMG_7896.jpg" style="width:100%" onclick="currentSlide(5)">
+                </div>    
+            </div>
+    
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                    
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                    
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                    
+                function showSlides(n) {
+                  var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                    slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                  captionText.innerHTML = dots[slideIndex-1].alt;
+                }
+        </script>
+
+    </body>
+</html>
