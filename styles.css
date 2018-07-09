@@ -1,4 +1,39 @@
-fa {
+
+
+.top {
+    font-family: 'EB Garamond', bold;
+    font-size: 72px;
+    top: 0;
+    text-align: center;
+    color:black;
+    text-decoration: none;
+    display: block;
+}
+
+.main {
+    overflow-y: auto;
+    font-family: 'EB Garamond';
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.links a {
+    display: block;
+    overflow-y: auto;
+    font-family: 'EB Garamond', bold;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    width: 30%;
+}
+
+.links:hover{
+    opacity: 0.5;
+    transition: 300ms;
+}
+
+.home {
     padding:20px;
     font-size: 30px;
     width: 30px;
@@ -9,7 +44,7 @@ fa {
     color: white;
 }
 
-fa:hover {
-    opacity: 0.7;
-    transition: 300ms;
-}
+.home:hover {
+            opacity: 0.7;
+            transition: 300ms;
+        }
